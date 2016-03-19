@@ -1,10 +1,10 @@
 CC=gcc
-CFLAGS=-g -Wall -lpthread
+CFLAGS=-g -Wall
 all: myShell
-run: myShell
+test: myShell
 	./myShell
 	$(RM) myShell
 myShell:
-	$(CC) $(CFLAGS) myShell.c -o myShell
+	$(CC) $(CFLAGS) myShell.c -o myShell -lpthread
 clean:
 	$(RM) myShell
